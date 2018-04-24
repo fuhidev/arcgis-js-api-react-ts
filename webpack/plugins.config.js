@@ -3,17 +3,17 @@ const webpack = require("webpack");
 const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const StyleExtHtmlWebpackPlugin = require("style-ext-html-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const StyleExtHtmlWebpackPlugin = require("style-ext-html-webpack-plugin");
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const AppCachePlugin = require("appcache-webpack-plugin-plus").default;
-const ImageminPlugin = require("imagemin-webpack-plugin").default;
+// const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const workboxPlugin = require("workbox-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
-const PrettierPlugin = require("prettier-webpack-plugin");
-const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
+// const PrettierPlugin = require("prettier-webpack-plugin");
+// const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 const html = require("./html.config");
 const sw = require("./sw.config");
@@ -75,13 +75,12 @@ module.exports = function(env, options) {
         output: "manifest.appcache"
       })
     );
-    console.log('huhu')
     plugins.push(new workboxPlugin(sw));
   } else {
     // plugins.push(new webpack.NamedModulesPlugin());
     // plugins.push(new webpack.HotModuleReplacementPlugin());
   }
   // plugins.push(new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }));
-  
+  console.log(plugins);
   return plugins;
 };

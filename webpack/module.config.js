@@ -9,9 +9,6 @@ module.exports = function() {
       {
         test: /\.tsx?$/,
         loader: "ts-loader",
-        // options: {
-        //   transpileOnly: true
-        // }
       },
       {
         test: /\.scss$/,

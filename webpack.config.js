@@ -33,7 +33,7 @@ module.exports = function (env, options) {
   };
 
   if (env.dev) {
-    config.devtool = 'eval'
+    config.devtool = 'source-map'
     config.devServer = devServer(env.production);
   }
 

@@ -1,10 +1,10 @@
 /* eslint-env node */
-const JSAPI_VERSION = "js.arcgis.com/4.6";
+const JSAPI_VERSION = "js.arcgis.com/4.5";
 
 module.exports = function (env, options) {
   return [
     {
-      title: "ArcGIS JSAPI React App",
+      title: "TÂN HÒA - Quản lý lộ trình",
       template: "src/index.ejs",
       filename: "index.html",
       favicon: "src/assets/favicon.ico",
